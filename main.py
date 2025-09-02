@@ -1,28 +1,31 @@
-# A simple calculator program
+"""
+A simple command-line calculator program.
+Performs basic arithmetic operations: addition, subtraction, multiplication, and division.
+"""
+
 def add(x, y):
-    """This function adds two numbers"""
+    """This function adds two numbers."""
     return x + y
 
 def subtract(x, y):
-    """This function subtracts two numbers"""
+    """This function subtracts two numbers."""
     return x - y
 
 def multiply(x, y):
-    """This function multiplies two numbers"""
+    """This function multiplies two numbers."""
     return x * y
 
 def divide(x, y):
-    """This function divides two numbers"""
+    """This function divides two numbers."""
     if y == 0:
         return "Error! Division by zero."
-    else:
-        return x / y
-      
+    return x / y
+
 print("Select operation:")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
 
 while True:
     choice = input("Enter choice (1/2/3/4): ")
@@ -39,5 +42,4 @@ while True:
         elif choice == '4':
             print(num1, "/", num2, "=", divide(num1, num2))
         break
-    else:
-        print("Invalid Input")
+    print("Invalid Input")
